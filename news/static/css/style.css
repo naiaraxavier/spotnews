@@ -6,7 +6,7 @@ html {
 
 * {
     border: none;
-    color: rgb(239,241,244);
+    color: rgb(239, 241, 244);
     margin: 0;
     list-style: none;
     padding: 0;
@@ -15,7 +15,7 @@ html {
 
 body {
     align-items: center;
-    background-color: rgb(27,26,28);
+    background-color: rgb(27, 26, 28);
     display: flex;
     flex-direction: column;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -23,10 +23,11 @@ body {
 }
 
 input {
-    color: rgb(30,39,49);
+    color: rgb(30, 39, 49);
 }
 
-.news-container, .header {
+.news-container,
+.header {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -36,7 +37,7 @@ input {
 }
 
 .header {
-    background-color: rgb(30,39,49);
+    background-color: rgb(30, 39, 49);
     position: fixed;
     width: 100%;
 }
@@ -65,7 +66,7 @@ nav {
 
 .news-card {
     align-items: center;
-    background-color: rgb(30,39,49);
+    background-color: rgb(30, 39, 49);
     border: 1px solid rgb(51, 51, 51);
     border-radius: 10px;
     display: flex;
@@ -87,7 +88,7 @@ nav {
     width: 50%;
 }
 
-.news-detail > .news-title {
+.news-detail>.news-title {
     font-size: 14pt;
 }
 
@@ -97,7 +98,7 @@ news-date {
 
 .news-detail {
     align-items: center;
-    background-color: rgb(30,39,49);
+    background-color: rgb(30, 39, 49);
     border: 1px solid rgb(51, 51, 51);
     border-radius: 10px;
     display: flex;
@@ -108,7 +109,7 @@ news-date {
     margin: auto;
     margin-top: 80px;
     text-align: center;
-    padding: 15px ;
+    padding: 15px;
     width: 75%;
 }
 
@@ -121,7 +122,7 @@ news-date {
     width: 50%;
 }
 
-.news-detail > .news-title {
+.news-detail>.news-title {
     font-size: 20pt;
 }
 
@@ -156,7 +157,8 @@ news-date {
     width: 60%;
 }
 
-.news-form, .categories-form {
+.news-form,
+.categories-form {
     align-items: center;
     background-color: rgba(240, 248, 255, 0.133);
     border-radius: 20px;
@@ -170,7 +172,9 @@ news-date {
     width: 80%;
 }
 
-.news-form input, .news-form textarea, .news-form select {
+.news-form input,
+.news-form textarea,
+.news-form select {
     border-radius: 5px;
     border: 1px solid rgb(51, 51, 51);
     color: black;
@@ -191,7 +195,7 @@ news-date {
     background-color: rgb(30, 40, 49);
     border-radius: 10px;
     display: flex;
-    cursor: pointer; 
+    cursor: pointer;
     justify-content: space-between;
     margin: 14px 0;
     width: 17%;
@@ -228,7 +232,8 @@ news-date {
     width: 15px;
 }
 
-#id_categories input[type="checkbox"]:hover, #id_categories label:hover {
+#id_categories input[type="checkbox"]:hover,
+#id_categories label:hover {
     cursor: pointer;
 }
 
