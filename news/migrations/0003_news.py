@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                     "title",
                     models.CharField(
                         max_length=200,
-                        validators=[news.validators.validade_news_title],
+                        validators=[news.validators.validate_news_title],
                     ),
                 ),
                 ("content", models.TextField()),

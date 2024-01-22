@@ -15,6 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class NewsSerializer(serializers.ModelSerializer):
+    # created_at = serializers.DateTimeField(format="%Y-%m-%d")
     class Meta:
         model = News
         fields = "__all__"

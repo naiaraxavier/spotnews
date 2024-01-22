@@ -1,5 +1,6 @@
 from django.db import models
-from news.validators import validade_news_title
+
+from news.validators import validate_news_title
 
 
 class Category(models.Model):
@@ -20,7 +21,7 @@ class User(models.Model):
 
 
 class News(models.Model):
-    title = models.CharField(max_length=200, validators=[validade_news_title])
+    title = models.CharField(max_length=200, validators=[validate_news_title])
     content = models.TextField()
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="news"
