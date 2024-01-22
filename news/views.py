@@ -1,7 +1,9 @@
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from news.forms import CreateCategoryForm, CreateNewsForm
-from news.models import Category, News
+from news.models import Category, News, User
+from .serializers import CategorySerializer, UserSerializer, NewsSerializer
+from rest_framework import viewsets
 
 
 def index(request):
@@ -58,3 +60,18 @@ def news_form(request):
     context = {"form": form}
 
     return render(request, "news_form.html", context)
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class NewsViewSet(viewsets.ModelViewSet):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
