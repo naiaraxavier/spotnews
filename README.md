@@ -58,7 +58,7 @@ python3 manage.py runserver
 Abra o navegador e acesse http://127.0.0.1:8000/ para visualizar o Spotnews.
 
 
-**Contribuições 💪**
+## Contribuições 💪
 
 Desenvolvido por Naiara Martins
 
