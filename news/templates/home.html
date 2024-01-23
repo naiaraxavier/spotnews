@@ -8,6 +8,7 @@ Página Inicial
 
 
 {% block content %}
+
 <div class="news-container">
     {% for n in news %}
 
@@ -15,11 +16,11 @@ Página Inicial
         <a href="{% url 'news-details-page' n.id %}">
             <h2 class="news-title">{{ n.title }}</h2>
             <span class="news-date">{{ n.created_at | date:"SHORT_DATE_FORMAT" }}</span>
-        </a>
-        {% if n.image %}
-        <img class="news-image" src="{% static n.image.url %}" alt="Imagem sobre a notícia">
-        {% endif %}
 
+            {% if n.image %}
+            <img class="news-image" src="{% static n.image.url %}" alt="Imagem sobre a notícia">
+            {% endif %}
+        </a>
     </div>
 
     {% endfor %}

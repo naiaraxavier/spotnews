@@ -7,7 +7,24 @@ Formulário para Nova Notícia
 {% block content %}
 <form class="news-form" method="post" action="{% url 'news-form' %}" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">Salvar</button>
+    <div class="left-section">
+        <label for="id_title">Título:</label>
+        {{form.title}}
+        <label for="id_content">Conteúdo:</label>
+        {{form.content}}
+        <label for="id_author">Autoria:</label>
+        {{form.author}}
+        <label for="id_created_at">Criado em:</label>
+        {{form.created_at}}
+    </div>
+    <div class="right-section">
+        <label for="id_image">URL da Imagem:</label>
+        {{ form.image }}
+        <label for="id_categories">Categorias:</label>
+        {{form.categories}}
+    </div>
+    <div class="button-section">
+        <button type="submit" class="button">Salvar</button>
+    </div>
 </form>
 {% endblock %}
