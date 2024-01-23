@@ -8,6 +8,6 @@ Formulário para Nova Categoria
 <form class="categories-form" method="post" action="{% url 'categories-form' %}">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Salvar</button>
+    <button type="submit" class="button">Salvar</button>
 </form>
 {% endblock %}
